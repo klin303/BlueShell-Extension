@@ -11,6 +11,9 @@
         {
             "include": "#entities"
         },
+        {
+            "include": "#constants"
+        },
 		{
 			"include": "#strings"
 		}
@@ -47,6 +50,14 @@
                 }
             ]
 		},
+        "constants": {
+            "patterns": [
+                {
+                    "name": "constant.language",
+                    "match": "\\b(true|false)\\b"
+                }
+            ]
+        },
         "entities": {
             "patterns": [
                 {
