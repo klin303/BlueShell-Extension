@@ -1,0 +1,25 @@
+{
+  "name": "blueshell",
+  "displayName": "BlueShell",
+  "description": "Language support for the BlueShell Language",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.79.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "blueshell",
+      "aliases": ["BlueShell", "blueshell"],
+      "extensions": [".bs"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "blueshell",
+      "scopeName": "source.bs",
+      "path": "./syntaxes/blueshell.tmLanguage.json"
+    }]
+  }
+}
