@@ -53,8 +53,12 @@
         "constants": {
             "patterns": [
                 {
-                    "name": "constant.language",
+                    "name": "constant.language.blueshell",
                     "match": "\\b(true|false)\\b"
+                },
+                {
+                    "name": "constant.numeric.blueshell",
+                    "match": "\\b(\\d+|(\\d+\\.\\d*)\\b)"
                 }
             ]
         },
@@ -83,7 +87,13 @@
                 {
 					"name": "string.quoted.single.blueshell",
                     "begin": "\\'",
-			        "end": "\\'"
+			        "end": "\\'",
+                    "patterns": [
+                        {
+                            "name": "constant.character.escape.blueshell",
+                            "match": "\\\\."
+                        }
+                    ]
                 }
 			]
 		}
