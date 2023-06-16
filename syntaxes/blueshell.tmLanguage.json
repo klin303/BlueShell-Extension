@@ -2,6 +2,9 @@
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"name": "BlueShell",
 	"patterns": [
+        {
+            "include": "#comments"
+        },
 		{
 			"include": "#keywords"
 		},
@@ -10,6 +13,29 @@
 		}
 	],
 	"repository": {
+        "comments": {
+            "patterns": [
+                {
+                    "name": "comment.line.double-slash.blueshell",
+                    "match": "((^|\\s)//).*$"
+                },
+                {
+                    "name": "comment.block.blueshell",
+                    "begin": "\\s*+(\\/\\*)",
+					"end": "\\*\\/",
+					"beginCaptures": {
+						"1": {
+							"name": "punctuation.definition.comment.begin.c"
+						}
+					},
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.comment.end.c"
+						}
+					}
+                }
+            ]
+        },
 		"keywords": {
 			"patterns": [
                 {
