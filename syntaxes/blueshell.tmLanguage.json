@@ -11,20 +11,32 @@
 	],
 	"repository": {
 		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.blueshell",
-				"match": "\\b(if|else|while|for|return|withargs|of|len)\\b"
-			}]
+			"patterns": [
+                {
+                    "name": "keyword.control.blueshell",
+                    "match": "\\b(if|else|while|for|return|withargs|of|len)\\b"
+                }
+            ]
 		},
 		"strings": {
-			"name": "string.quoted.double.blueshell",
-			"begin": "\"",
-			"end": "\"",
+			"name": "string.quoted.blueshell",
 			"patterns": [
 				{
-					"name": "constant.character.escape.blueshell",
-					"match": "\\\\."
-				}
+					"name": "string.quoted.double.blueshell",
+                    "begin": "\"",
+			        "end": "\"",
+					"patterns": [
+                        {
+                            "name": "constant.character.escape.blueshell",
+                            "match": "\\\\."
+                        }
+                    ]
+				},
+                {
+					"name": "string.quoted.single.blueshell",
+                    "begin": "\\'",
+			        "end": "\\'"
+                }
 			]
 		}
 	},
