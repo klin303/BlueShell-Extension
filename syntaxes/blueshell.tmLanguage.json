@@ -99,12 +99,8 @@
                     "match": "\\b(int|bool|float|void|exec|char|string|list|function)\\b"
                 },
                 {
-                    "name": "storage.modifier.blueshell",
-                    "match": "->|::|of|\\$"
-                },
-                {
                     "name": "entity.name.function.blueshell",
-                    "match": "\\b([A-Za-z_][A-Za-z0-9_]*)(?=\\s*\\()"
+                    "match": "\\b(?!(len|of)\\b)([A-Za-z_][A-Za-z0-9_]*)(?=\\s*\\()"
                 }
             ]
         }, 
@@ -112,7 +108,11 @@
             "patterns": [ 
                 {
                     "name": "variable.blueshell",
-                    "match": "\\b([A-Za-z_][A-Za-z0-9_]*)\\b"
+                    "match": "\\b(?!(len|of)\\b)([A-Za-z_][A-Za-z0-9_]*)\\b"
+                },
+                {
+                    "name": "storage.modifier.blueshell",
+                    "match": "->|::|of|\\$|len"
                 }
             ]
         }
