@@ -9,14 +9,17 @@
 			"include": "#keywords"
 		},
         {
-            "include": "#entities"
-        },
-        {
             "include": "#constants"
         },
 		{
 			"include": "#strings"
-		}
+		},
+        {
+            "include": "#entities"
+        },
+        {
+            "include": "#variables"
+        }
 	],
 	"repository": {
         "comments": {
@@ -31,12 +34,12 @@
 					"end": "\\*\\/",
 					"beginCaptures": {
 						"1": {
-							"name": "punctuation.definition.comment.begin.c"
+							"name": "punctuation.definition.comment.begin.blueshell"
 						}
 					},
 					"endCaptures": {
 						"0": {
-							"name": "punctuation.definition.comment.end.c"
+							"name": "punctuation.definition.comment.end.blueshell"
 						}
 					}
                 }
@@ -59,14 +62,6 @@
                 {
                     "name": "constant.numeric.blueshell",
                     "match": "\\b(\\d+|(\\d+\\.\\d*)\\b)"
-                }
-            ]
-        },
-        "entities": {
-            "patterns": [
-                {
-                    "name": "entity.name.type.blueshell",
-                    "match": "\\b(int|bool|float|void|exec|char|string|list|function)\\b"
                 }
             ]
         },
@@ -96,7 +91,27 @@
                     ]
                 }
 			]
-		}
+		},
+        "entities": {
+            "patterns": [
+                {
+                    "name": "entity.name.type.blueshell",
+                    "match": "\\b(int|bool|float|void|exec|char|string|list|function)\\b"
+                },
+                {
+                    "name": "entity.name.function.blueshell",
+                    "match": "\\b([A-Za-z_][A-Za-z0-9_]*)(?=\\s*\\()"
+                }
+            ]
+        }, 
+        "variables": {
+            "patterns": [ 
+                {
+                    "name": "variable.blueshell",
+                    "match": "\\b([A-Za-z_][A-Za-z0-9_]*)\\b"
+                }
+            ]
+        }
 	},
 	"scopeName": "source.bs"
 }
