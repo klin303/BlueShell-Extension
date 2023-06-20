@@ -24,5 +24,8 @@ To install the BlueShell compiler, see instructions at https://github.com/klin30
 
 Initial release of the BlueShell extension.
 
+### 1.0.1
+
+Updates to documentation.
 
 
