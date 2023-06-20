@@ -2,18 +2,16 @@
 
 This extension provides syntax highlighting for the BlueShell programming
 language. The extension works on files with the **.bs** file extension.
-<br />
-<br />
-
 
 ## Features 
 ### BlueShell without Syntax Highlighting 
-![Alt text](plain.png)
+![Alt text](images/plain.png)
 
 ### BlueShell with Syntax Highlighting 
-![Alt text](highlighted.png)
+![Alt text](images/highlighted.png)
 
-
+## Extension on Marketplace
+Find this extension on Marketplace at https://marketplace.visualstudio.com/items?itemName=klin303.blueshell
 
 ## Installing BlueShell
 

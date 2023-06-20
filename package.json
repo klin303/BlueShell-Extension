@@ -2,8 +2,9 @@
   "name": "blueshell",
   "displayName": "BlueShell",
   "description": "Language support for the BlueShell Language",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "klin303",
+  "icon": "images/logo.png",
   "engines": {
     "vscode": "^1.79.0"
   },
