@@ -49,7 +49,7 @@
 			"patterns": [
                 {
                     "name": "keyword.control.blueshell",
-                    "match": "\\b(if|else|while|for|return|withargs|of)\\b"
+                    "match": "\\b(if|else|while|for|return|withargs)\\b"
                 }
             ]
 		},
@@ -97,6 +97,10 @@
                 {
                     "name": "entity.name.type.blueshell",
                     "match": "\\b(int|bool|float|void|exec|char|string|list|function)\\b"
+                },
+                {
+                    "name": "storage.modifier.blueshell",
+                    "match": "->|::|of|\\$"
                 },
                 {
                     "name": "entity.name.function.blueshell",
